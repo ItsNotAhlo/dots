@@ -14,9 +14,9 @@
       decorations_theme_variant = "None";
     };
 
-    import = [
-      pkgs.alacritty-theme
-    ];
+#    import = [
+#      pkgs.alacritty-theme
+#    ];
 
     font = let jetbrainsMono = style: {
       family = "JetBrainsMono Nerd Font";

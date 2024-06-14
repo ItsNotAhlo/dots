@@ -1,8 +1,9 @@
 {pkgs, ...}:
 {
   enable = true;
+  xwayland.enable = true;
   settings = {
-    "$mod" = "SUPER";
+    "$mod" = "ALT";
     input = {
       monitor = [
       ];
@@ -10,21 +11,23 @@
     bind =
     [
       "$mod, Q, exec, alacritty"
+      "$mod, X, fakefullscreen"
       "$mod, C, killactive"
       "$mod, M, exit"
-      "$mod, F, exec, firefox"
-      "$mod, E, exec, nautilus"
+      "$mod, B, exec, firefox"
+      "$mod, F, exec, nautilus"
       "$mod, V, togglefloating"
       "$mod, R, exec, wofi --show drun"
       "$mod, P, pseudo"
       "$mod, J, togglesplit"
       "$mod, T, togglegroup"
-      "$mod+ALT, J, changegroupactive, f"
-      "$mod+ALT, K, changegroupactive, f"
+      "$mod+CTRL, J, changegroupactive, f"
+      "$mod+CTRL, K, changegroupactive, f"
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"
       "$mod, up, movefocus, u"
       "$mod, down, movefocus, d"
+      "$mod, Z, fullscreen, 1"
     ]
     ++ (
       builtins.concatLists (builtins.genList (
@@ -49,6 +52,11 @@
 
   env = QT_QPA_PLATFORMTHEME,qt6ct   # for Qt apps
 
+  exec-once = $HOME/.local/lib/import_env tmux
+
+  bindm=$mod,mouse:272,movewindow
+  bindm=$mod,mouse:273,resizewindow
+
   bezier=easeOutBack,0.34,1.56,0.64,1
   bezier=easeInBack,0.36,0,0.66,-0.56
   bezier=easeInCubic,0.32,0,0.67,0
@@ -63,8 +71,9 @@
     force_zero_scaling = true
   }
 
-  monitor=HDMI-A-1,3840x2160,1920x0,2
-  monitor=eDP-1,2256x1504,0x0,1.5
+  monitor=DP-1,2560x1440,0x240,1,
+  monitor=DP-3,2560x1440,-2560x240,1
+  monitor=DP-2,1920x1080,auto-right,1,transform,1
 
   input {
     follow_mouse = 1

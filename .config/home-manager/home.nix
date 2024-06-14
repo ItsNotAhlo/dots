@@ -5,7 +5,6 @@
   # manage.
   home.username = "ahlo";
   home.homeDirectory = "/home/ahlo";
-
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -27,6 +26,7 @@
     blender
     brave
     chatterino2
+    discord
     discordo
     eza
     flameshot
@@ -42,10 +42,12 @@
     obsidian
     osu-lazer
     pipewire
+    prismlauncher
     protonup-qt
     qemu
     qtemu
     qutebrowser
+    ragnarvm
     slack
     spotify
     steam
@@ -56,8 +58,10 @@
     transmission
     vlc
     webcord-vencord
+    wofi
     yt-dlp
     zathura
+    zulu17
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
