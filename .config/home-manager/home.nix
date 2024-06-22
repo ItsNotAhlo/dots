@@ -22,12 +22,14 @@
     # hello
     ani-cli
     atlauncher
+    xorg.xinit
+    godot3
     bitwarden-desktop
     blender
     brave
     chatterino2
-    discord
     discordo
+    discord-canary
     eza
     flameshot
     gimp
@@ -37,17 +39,19 @@
     modrinth-app
     mpv
     mumble
+    appimage-run
     nerdfonts
     obs-studio
     obsidian
     osu-lazer
     pipewire
+    picom-pijulius
     prismlauncher
     protonup-qt
     qemu
     qtemu
     qutebrowser
-    ragnarvm
+    ragnarwm
     slack
     spotify
     steam
