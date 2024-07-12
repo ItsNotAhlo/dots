@@ -77,7 +77,7 @@
     test = "home-manager build";
     nvim = "lvim";
     vim = "lvim";
-    ani-cli = "ani-cli-unwrapped --skip";
+#    ani-cli = "ani-cli-unwrapped --skip";
     tree = "eza -RT";
   };
 }

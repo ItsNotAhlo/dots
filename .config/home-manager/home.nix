@@ -21,37 +21,44 @@
     # # "Hello, world!" when run.
     # hello
     ani-cli
+    appimage-run
     atlauncher
-    xorg.xinit
-    godot3
     bitwarden-desktop
     blender
     brave
+    btop
     chatterino2
-    discordo
+    curl
     discord-canary
+    discordo
     eza
     flameshot
     gimp
+    godot3
     helvum
     ivpn
     lunarvim
     modrinth-app
+    mov-cli
     mpv
     mumble
-    appimage-run
     nerdfonts
+    newsboat
     obs-studio
     obsidian
     osu-lazer
-    pipewire
     picom-pijulius
+    pipewire
     prismlauncher
     protonup-qt
+    python312Packages.devgoldyutils
+    python3
+    python312Packages.pip
     qemu
     qtemu
     qutebrowser
     ragnarwm
+    simplex-chat-desktop
     slack
     spotify
     steam
@@ -59,10 +66,12 @@
     tailscale
     texmaker
     thunderbird
-    transmission
+    transmission-gtk
     vlc
     webcord-vencord
+    wget
     wofi
+    xorg.xinit
     yt-dlp
     zathura
     zulu17
@@ -79,7 +88,9 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
-
+  
+  # Picom?
+#  services.picom.enable = true;
   
 #  wayland.windowManager.hyprland = {
 #    enable = true;
@@ -164,6 +175,9 @@
 #    ani-cli = "ani-cli-unwrapped --skip";
 #    };
 #  };
+
+  # Picom
+#  picom.override = { withDebug = true; };
 
   programs = {
     zsh = (import ./zsh.nix { inherit config pkgs; });
